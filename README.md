@@ -1,8 +1,9 @@
+<!--title-->
 # Quy trình đánh giá CV tự động với Google Apps Script
+<!--/title-->
 
 > Đây là một project mình tự làm để học về tự động hóa xử lý dữ liệu ứng viên bằng Google Workspace, API và AI.
 
----
 
 ## Mô tả dự án
 
@@ -12,7 +13,6 @@ Dự án này xây dựng một workflow trong Google Apps Script để:
 - Gửi nội dung cho mô hình AI DeepSeek để đánh giá mức độ phù hợp
 - Ghi kết quả đánh giá vào một Sheet riêng
 
----
 
 ## Sơ đồ quy trình hoạt động
 
@@ -37,7 +37,6 @@ flowchart TD
 | OCR.space API | Trích xuất text từ file PDF                     |
 | DeepSeek API  | Đánh giá nội dung CV dựa theo yêu cầu công việc |
 
----
 
 ## Kết quả đầu ra
 
@@ -48,7 +47,6 @@ Kết quả sau khi xử lý sẽ được ghi vào sheet `Đánh giá` dưới 
 | Nguyễn Văn A    | [a@gmail.com](mailto:a@gmail.com) | Cao                     |
 | Trần Thị B      | [b@gmail.com](mailto:b@gmail.com) | Trung bình              |
 
----
 
 ## Hướng dẫn cài đặt
 
@@ -65,7 +63,6 @@ Hình ảnh minh họa form mẫu:
 ![image](https://github.com/user-attachments/assets/2a2c9744-ed82-4be5-b905-ad28ed28bf6f)
 
 
----
 
 ### 2. Liên kết sheet với form
 
@@ -75,13 +72,11 @@ Hình ảnh minh họa form mẫu:
 Vào Tiện ích > Apps script
 ![image](https://github.com/user-attachments/assets/26919612-f5a9-45a0-a435-11f5c21c7d2a)
 
----
 ### 4. Cài đặt mã nguồn Apps Script
 
 dán code Code.gs vào code trên google app scripts
 ![image](https://github.com/user-attachments/assets/aacc28c2-cfa7-48bc-939a-56075a4345b4)
 
----
 
 ### 5. Thiết lập `config.gs`
 
@@ -96,7 +91,6 @@ const CONFIG = {
 
 > Ghi chú: Đây là nơi lưu **API key riêng tư**, bạn **không nên commit file này lên GitHub** công khai. Đã có `.gitignore` để hỗ trợ bỏ qua file này.
 
----
 
 #### Cách lấy `OCR_API_KEY`
 
@@ -123,27 +117,23 @@ sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 6. Dán vào trường `DEEPSEEK_API_KEY` trong file `config.gs`.
 
----
 
 > **Lưu ý quan trọng**:
 >
 > * Nếu bạn dùng mô hình `deepseek/deepseek-coder:free` hoặc `deepseek/deepseek-r1:free`, hãy đảm bảo bạn có đủ quota miễn phí trên OpenRouter.
 > * Một số mô hình chỉ có giới hạn số lượng request mỗi ngày.
 
----
 
 ## Demo hoạt động
 
 ![image](https://github.com/user-attachments/assets/e761da61-c5a8-4679-b340-ae1d4886b886)
 
----
 
 ## Bảo mật
 
 * Không commit file `config.gs` nếu bạn đẩy lên GitHub công khai
 * Đã có `.gitignore` để bỏ qua các file chứa key
 
----
 
 ## Công nghệ sử dụng
 
@@ -155,7 +145,6 @@ sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 | Google Sheets                 | Lưu dữ liệu và kết quả      |
 | Google Forms                  | Thu thập thông tin ứng viên |
 
----
 
 ## Gợi ý mở rộng
 
@@ -163,9 +152,6 @@ sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 * Phân loại ứng viên theo ngành nghề
 * Dashboard quản lý ứng viên theo thời gian
 
----
-
-## Liên hệ
 
 Bạn có thể dùng project này để học hoặc chỉnh sửa theo ý bạn.
 Mọi góp ý hoặc đóng góp, hãy tạo issue hoặc pull request.
