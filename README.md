@@ -25,7 +25,6 @@ flowchart TD
     E --> F[Ghi kết quả đánh giá vào Sheet kết quả]
 ````
 
----
 
 ## Các thành phần chính
 
@@ -50,16 +49,16 @@ Kết quả sau khi xử lý sẽ được ghi vào sheet `Đánh giá` dưới 
 
 ## Hướng dẫn cài đặt
 
-### 1. Tạo Google Form
+### Tạo Google Form
 
 * Các trường cần có:
-
   * Họ và tên
   * Email
   * Tải lên file CV (PDF)
 * Liên kết Google Form với Google Sheet
 
 Hình ảnh minh họa form mẫu:
+
 ![image](https://github.com/user-attachments/assets/2a2c9744-ed82-4be5-b905-ad28ed28bf6f)
 
 
@@ -69,12 +68,15 @@ Hình ảnh minh họa form mẫu:
 ![image](https://github.com/user-attachments/assets/dfa70231-245c-4647-a0f2-e8eb9ec587b4)
 
 ### 3. Tạo app scripts cho sheet
+
 Vào Tiện ích > Apps script
+
 ![image](https://github.com/user-attachments/assets/26919612-f5a9-45a0-a435-11f5c21c7d2a)
 
 ### 4. Cài đặt mã nguồn Apps Script
 
 dán code Code.gs vào code trên google app scripts
+
 ![image](https://github.com/user-attachments/assets/aacc28c2-cfa7-48bc-939a-56075a4345b4)
 
 
@@ -111,7 +113,7 @@ const CONFIG = {
 4. Nhấn nút **“Create Key”** để tạo key mới
 5. Sao chép chuỗi key có dạng:
 
-```
+```sh
 sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
@@ -128,12 +130,10 @@ sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ![image](https://github.com/user-attachments/assets/e761da61-c5a8-4679-b340-ae1d4886b886)
 
-
 ## Bảo mật
 
 * Không commit file `config.gs` nếu bạn đẩy lên GitHub công khai
 * Đã có `.gitignore` để bỏ qua các file chứa key
-
 
 ## Công nghệ sử dụng
 
